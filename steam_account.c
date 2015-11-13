@@ -92,11 +92,11 @@ static void merge(struct list_head *head, struct list_head *mid,
                   game_comparator_t *cmp)
 {
         struct list_head *head_ptr1, *head_ptr2;  //next node to be sorted
-        struct list_head *curr_ptr;  //next position to be insert after
+        struct list_head *curr_ptr;  //next position to insert after
         struct game *game_ptr1, *game_ptr2;
 
         //the loop invariant here is:
-        //curr_ptr : next position to be insert after
+        //curr_ptr : next position to insert after
         //(curr_ptr, head_ptr1) : sorted
         //[head_ptr1, head_ptr2) : part1
         //[head_ptr2, head) : part2
