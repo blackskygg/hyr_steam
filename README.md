@@ -11,11 +11,16 @@ As is known to all, hyr is a parvenue. He hire us to write a list implementation
 ###functions manipulating games
 `struct game *add_game(struct steam_account *acct, char *name,
              char *intro, double hrs_played, char *company_name);`
->given add a game to `acct'
->`name` : the game's name
->`intro` : the introcution to the game
->`hrs_played` : how many hours have been wasted on the game
->`company_name` : name of the game's company(the company should be exist in the company list, or it'll fail)
+>given add a game to `acct'  
+
+>`name` : the game's name  
+
+>`intro` : the introcution to the game  
+
+>`hrs_played` : how many hours have been wasted on the game  
+
+>`company_name` : name of the game's company(the company should be exist in the company list, or it'll fail)  
+
 >if succeed, return the newly added game struct, failed NULL  
 
 `struct game *query_game(struct steam_account *acct, char *name);`
@@ -25,22 +30,31 @@ As is known to all, hyr is a parvenue. He hire us to write a list implementation
 >given the game's name, remove it from the list  
 
 `int add_achievement(struct steam_account *acct, char *game_name, char *achvmnt_intro);`
->add a piece of achievement information to the game specified by `name`
+>add a piece of achievement information to the game specified by `name`  
+
 >return an errno if failed  
 
 `void sort_game(struct steam_account *acct, enum sort_option option);`
->given an account `acct`, sort the game according to the given `option`
->possible options are(one at a time):
->BY_NAME : sort by name
->BY_COMPANY : sort by company
->BY_HRS : sort by hours spent on the game
->BY_INTRO : sort by the game's description  
+>given an account `acct`, sort the game according to the given `option`  
+
+>`possible` options are(one at a time):  
+
+>`BY_NAME` : sort by name  
+
+>`BY_COMPANY` : sort by company  
+
+>`BY_HRS` : sort by hours spent on the game  
+
+>`BY_INTRO` : sort by the game's description  
 
 ###functions manipulating companies
 `struct company *add_company(struct steam_account *acct, char *name, char *intro);`  
->add a company to `acct`'s company list
->`name` : the company's name
->`intro` : the company's description  
+>add a company to `acct`'s company list  
+
+>`name` : the company's name  
+
+>`intro` : the company's description   
+
 >return value : same as `add_game()`  
 
 `struct company *query_company(struct steam_account *acct, char *name);`
