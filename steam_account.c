@@ -287,7 +287,6 @@ int delete_game(struct steam_account *acct, char *name)
                 return EHYR_NOTFOUND;
 
         free_game(&game_ptr->game_node);
-        list_delete(&game_ptr->game_node, struct game, game_node);
 
         return 0;
 }
